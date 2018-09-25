@@ -28,6 +28,9 @@ class SongsController < ApplicationController
   end
 
   def delete
+    @song = Song.find(params[:id])
+    @song.destroy
+    redirect_to '/index'
   end
 
   private

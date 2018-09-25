@@ -28,6 +28,9 @@ class GenresController < ApplicationController
   end
 
   def delete
+    @genre = Genre.find(params[:id])
+    @genre.destroy
+    redirect_to '/index'
   end
 
   private

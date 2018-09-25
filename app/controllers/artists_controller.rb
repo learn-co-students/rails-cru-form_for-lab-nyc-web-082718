@@ -28,6 +28,9 @@ class ArtistsController < ApplicationController
   end
 
   def delete
+    @artist = Artist.find(params[:id])
+    @artist.destroy
+    redirect_to '/index'
   end
 end
 
